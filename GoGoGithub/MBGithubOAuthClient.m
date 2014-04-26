@@ -9,8 +9,7 @@
 #import "MBGithubOAuthClient.h"
 
 static NSString * const kOAuthBaseURLString = @"https://github.com/login/oauth/";
-
-static NSString * const kMBRegexPattern = @"access_token=([^&]+)";
+static NSString * const kMBAccessTokenRegexPattern = @"access_token=([^&]+)";
 
 @interface MBGithubOAuthClient ()
 
@@ -113,7 +112,7 @@ static NSString * const kMBRegexPattern = @"access_token=([^&]+)";
     __block NSString *accessToken = nil;
     
     NSError *error = nil;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:kMBRegexPattern options:NSRegularExpressionCaseInsensitive error:&error];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:kMBAccessTokenRegexPattern options:NSRegularExpressionCaseInsensitive error:&error];
     NSArray *matches = [regex matchesInString:string options:0 range:NSMakeRange(0, string.length)];
     
     if (!error && [matches count] > 0) {
@@ -145,7 +144,7 @@ static NSString * const kMBRegexPattern = @"access_token=([^&]+)";
     SecItemAdd((__bridge CFDictionaryRef)keychainQuery, NULL);
 }
 
-- (id)loadAccessTokenFromKeychain
+- (id)getOAuthTokenFromKeychain
 {
     id token = nil;
     NSMutableDictionary *keychainQuery = [self getKeychainQuery:kMBAccessTokenKey];
@@ -179,7 +178,7 @@ static NSString * const kMBRegexPattern = @"access_token=([^&]+)";
     NSString *accessToken = [[NSUserDefaults standardUserDefaults]objectForKey:kMBAccessTokenKey];
     
     if (!accessToken) {
-        accessToken = [self loadAccessTokenFromKeychain];
+        accessToken = [self getOAuthTokenFromKeychain];
     }
     
     return accessToken;
