@@ -55,18 +55,16 @@ static NSString * const kMBRegexPattern = @"access_token=([^&]+)";
         
     }
     
-    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@?client_id=%@&scope=%@",
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@authorize?client_id=%@&scope=%@",
                                                                     kOAuthBaseURLString,
-                                                                    kOAuthAuthorizeComponent,
                                                                     kGithubClientID,
                                                                     parametersString]]];
 }
 
 - (void)tokenRequestWithCallbackURL:(NSURL *)url saveOptions:(kMBSaveOptions)options completion:(MBGithubOAuthClientCompletionHandler)completionHandler
 {
-    NSString *requestString = [NSString stringWithFormat:@"%@%@?client_id=%@&client_secret=%@&code=%@",
+    NSString *requestString = [NSString stringWithFormat:@"%@access_token?client_id=%@&client_secret=%@&code=%@",
                                kOAuthBaseURLString,
-                               kOAuthAccessTokenComponent,
                                kGithubClientID,
                                kGithubClientSecret,
                                [self temporaryCodeFromCallbackURL:url]];
@@ -141,37 +139,37 @@ static NSString * const kMBRegexPattern = @"access_token=([^&]+)";
 {
     NSMutableDictionary *keychainQuery = [self getKeychainQuery:kMBAccessTokenKey];
     SecItemDelete((__bridge CFDictionaryRef)keychainQuery);
+    
     [keychainQuery setObject:[NSKeyedArchiver archivedDataWithRootObject:token] forKey:(__bridge id)kSecValueData];
+    
     SecItemAdd((__bridge CFDictionaryRef)keychainQuery, NULL);
 }
 
 - (id)loadAccessTokenFromKeychain
 {
-    id ret = nil;
+    id token = nil;
     NSMutableDictionary *keychainQuery = [self getKeychainQuery:kMBAccessTokenKey];
+    
     [keychainQuery setObject:(id)kCFBooleanTrue forKey:(__bridge id)kSecReturnData];
     [keychainQuery setObject:(__bridge id)kSecMatchLimitOne forKey:(__bridge id)kSecMatchLimit];
+    
     CFDataRef keyData = NULL;
     if (SecItemCopyMatching((__bridge CFDictionaryRef)keychainQuery, (CFTypeRef *)&keyData) == noErr) {
-        @try {
-            ret = [NSKeyedUnarchiver unarchiveObjectWithData:(__bridge NSData *)keyData];
-        }
-        @catch (NSException *e) {
-            NSLog(@"Unarchive of %@ failed: %@", kMBAccessTokenKey, e);
-        }
-        @finally {}
+
+        token = [NSKeyedUnarchiver unarchiveObjectWithData:(__bridge NSData *)keyData];
+        
     }
     if (keyData) CFRelease(keyData);
-    return ret;
+    
+    return token;
 }
 
-- (NSMutableDictionary *)getKeychainQuery:(NSString *)query {
-    return [NSMutableDictionary dictionaryWithObjectsAndKeys:
-            (__bridge id)kSecClassGenericPassword, (__bridge id)kSecClass,
-            query, (__bridge id)kSecAttrService,
-            query, (__bridge id)kSecAttrAccount,
-            (__bridge id)kSecAttrAccessibleAfterFirstUnlock, (__bridge id)kSecAttrAccessible,
-            nil];
+- (NSMutableDictionary *)getKeychainQuery:(NSString *)query
+{
+    return [@{ (__bridge id)kSecClass : (__bridge id)kSecClassGenericPassword,
+               (__bridge id)kSecAttrService : query,
+               (__bridge id)kSecAttrAccount : query,
+               (__bridge id)kSecAttrAccessible : (__bridge id)kSecAttrAccessibleAfterFirstUnlock } mutableCopy];
 }
 
 #pragma mark - Helper Methods 

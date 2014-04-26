@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     [[MBGithubOAuthClient sharedClient]tokenRequestWithCallbackURL:url
-                                                       saveOptions:kMBSaveOptionsUserDefaults
+                                                       saveOptions:kMBSaveOptionsKeychain
                                                         completion:^(BOOL success, NSError *error) {
                                                             
                                                             if (!error) {

@@ -8,11 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-static NSString * const kGithubClientID = @"7aa1fb9eea938a7509fb";
-static NSString * const kGithubClientSecret = @"d64c182d9797b11c91126a3ae2ca4fe8e83bb68c";
-
-static NSString * const kOAuthAuthorizeComponent = @"authorize";
-static NSString * const kOAuthAccessTokenComponent = @"access_token";
+#warning Please Enter your GitHub Client ID and Secret.
+static NSString * const kGithubClientID = @"";
+static NSString * const kGithubClientSecret = @"";
 
 static NSString * const kMBAccessTokenKey = @"kMBAccessTokenKey";
 
