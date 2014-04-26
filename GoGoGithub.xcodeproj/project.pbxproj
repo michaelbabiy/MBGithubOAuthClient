@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4861C00F190B668700FEB3B8 /* MBGithubOAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861C00E190B668700FEB3B8 /* MBGithubOAuthClient.m */; };
 		48EC10301909DFE7000B6B64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EC102F1909DFE7000B6B64 /* Foundation.framework */; };
 		48EC10321909DFE7000B6B64 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EC10311909DFE7000B6B64 /* CoreGraphics.framework */; };
 		48EC10341909DFE7000B6B64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EC10331909DFE7000B6B64 /* UIKit.framework */; };
@@ -19,6 +20,9 @@
 		48EC104B1909DFE7000B6B64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EC10331909DFE7000B6B64 /* UIKit.framework */; };
 		48EC10531909DFE7000B6B64 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48EC10511909DFE7000B6B64 /* InfoPlist.strings */; };
 		48EC10551909DFE7000B6B64 /* GoGoGithubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EC10541909DFE7000B6B64 /* GoGoGithubTests.m */; };
+		48EC10601909E021000B6B64 /* MBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EC105F1909E021000B6B64 /* MBHomeViewController.m */; };
+		48EC10651909E127000B6B64 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EC10641909E127000B6B64 /* iPhone.storyboard */; };
+		48EC106B190AB5DB000B6B64 /* NSString+MBRequestURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EC106A190AB5DB000B6B64 /* NSString+MBRequestURL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4861C00D190B668700FEB3B8 /* MBGithubOAuthClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBGithubOAuthClient.h; sourceTree = "<group>"; };
+		4861C00E190B668700FEB3B8 /* MBGithubOAuthClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBGithubOAuthClient.m; sourceTree = "<group>"; };
 		48EC102C1909DFE7000B6B64 /* GoGoGithub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGoGithub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48EC102F1909DFE7000B6B64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		48EC10311909DFE7000B6B64 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +54,12 @@
 		48EC10501909DFE7000B6B64 /* GoGoGithubTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoGoGithubTests-Info.plist"; sourceTree = "<group>"; };
 		48EC10521909DFE7000B6B64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		48EC10541909DFE7000B6B64 /* GoGoGithubTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoGoGithubTests.m; sourceTree = "<group>"; };
+		48EC105E1909E021000B6B64 /* MBHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBHomeViewController.h; sourceTree = "<group>"; };
+		48EC105F1909E021000B6B64 /* MBHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBHomeViewController.m; sourceTree = "<group>"; };
+		48EC10611909E105000B6B64 /* MBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBConstants.h; sourceTree = "<group>"; };
+		48EC10641909E127000B6B64 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		48EC1069190AB5DB000B6B64 /* NSString+MBRequestURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MBRequestURL.h"; sourceTree = "<group>"; };
+		48EC106A190AB5DB000B6B64 /* NSString+MBRequestURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MBRequestURL.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +86,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4861C00C190B65EC00FEB3B8 /* Previous Version */ = {
+			isa = PBXGroup;
+			children = (
+				48EC1069190AB5DB000B6B64 /* NSString+MBRequestURL.h */,
+				48EC106A190AB5DB000B6B64 /* NSString+MBRequestURL.m */,
+			);
+			name = "Previous Version";
+			sourceTree = "<group>";
+		};
+		4861C010190B668D00FEB3B8 /* MBGithubOAuthClient */ = {
+			isa = PBXGroup;
+			children = (
+				4861C00D190B668700FEB3B8 /* MBGithubOAuthClient.h */,
+				4861C00E190B668700FEB3B8 /* MBGithubOAuthClient.m */,
+			);
+			name = MBGithubOAuthClient;
+			sourceTree = "<group>";
+		};
 		48EC10231909DFE7000B6B64 = {
 			isa = PBXGroup;
 			children = (
@@ -107,8 +137,14 @@
 		48EC10351909DFE7000B6B64 /* GoGoGithub */ = {
 			isa = PBXGroup;
 			children = (
+				48EC10611909E105000B6B64 /* MBConstants.h */,
 				48EC103E1909DFE7000B6B64 /* MBAppDelegate.h */,
 				48EC103F1909DFE7000B6B64 /* MBAppDelegate.m */,
+				48EC105E1909E021000B6B64 /* MBHomeViewController.h */,
+				48EC105F1909E021000B6B64 /* MBHomeViewController.m */,
+				4861C010190B668D00FEB3B8 /* MBGithubOAuthClient */,
+				4861C00C190B65EC00FEB3B8 /* Previous Version */,
+				48EC10641909E127000B6B64 /* iPhone.storyboard */,
 				48EC10411909DFE7000B6B64 /* Images.xcassets */,
 				48EC10361909DFE7000B6B64 /* Supporting Files */,
 			);
@@ -221,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48EC103A1909DFE7000B6B64 /* InfoPlist.strings in Resources */,
+				48EC10651909E127000B6B64 /* iPhone.storyboard in Resources */,
 				48EC10421909DFE7000B6B64 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,8 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4861C00F190B668700FEB3B8 /* MBGithubOAuthClient.m in Sources */,
 				48EC103C1909DFE7000B6B64 /* main.m in Sources */,
 				48EC10401909DFE7000B6B64 /* MBAppDelegate.m in Sources */,
+				48EC10601909E021000B6B64 /* MBHomeViewController.m in Sources */,
+				48EC106B190AB5DB000B6B64 /* NSString+MBRequestURL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +401,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoGoGithub/GoGoGithub-Prefix.pch";
 				INFOPLIST_FILE = "GoGoGithub/GoGoGithub-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -374,7 +416,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoGoGithub/GoGoGithub-Prefix.pch";
 				INFOPLIST_FILE = "GoGoGithub/GoGoGithub-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -438,6 +482,7 @@
 				48EC105A1909DFE7000B6B64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48EC105B1909DFE7000B6B64 /* Build configuration list for PBXNativeTarget "GoGoGithubTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +491,7 @@
 				48EC105D1909DFE7000B6B64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
