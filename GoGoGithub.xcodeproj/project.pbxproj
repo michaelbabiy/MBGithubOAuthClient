@@ -35,8 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4861C00D190B668700FEB3B8 /* MBGithubOAuthClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBGithubOAuthClient.h; sourceTree = "<group>"; };
-		4861C00E190B668700FEB3B8 /* MBGithubOAuthClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBGithubOAuthClient.m; sourceTree = "<group>"; };
+		4861C00D190B668700FEB3B8 /* MBGithubOAuthClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBGithubOAuthClient.h; path = ../MBGithubOAuthClient/MBGithubOAuthClient.h; sourceTree = "<group>"; };
+		4861C00E190B668700FEB3B8 /* MBGithubOAuthClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBGithubOAuthClient.m; path = ../MBGithubOAuthClient/MBGithubOAuthClient.m; sourceTree = "<group>"; };
 		48EC102C1909DFE7000B6B64 /* GoGoGithub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGoGithub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48EC102F1909DFE7000B6B64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		48EC10311909DFE7000B6B64 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
