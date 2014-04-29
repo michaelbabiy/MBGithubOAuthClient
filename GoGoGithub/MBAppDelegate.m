@@ -11,23 +11,18 @@
 
 @implementation MBAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    return YES;
-}
-
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    [[MBGithubOAuthClient sharedClient]tokenRequestWithCallbackURL:url
+    [[MBGithubOAuthClient sharedClient] tokenRequestWithCallbackURL:url
                                                        saveOptions:kMBSaveOptionsKeychain
                                                         completion:^(BOOL success, NSError *error) {
-                                                            
-                                                            if (!error) {
+                                                            if (error || !success) {
+                                                                NSLog(@"Token request failed: %@", error.localizedDescription);
+                                                            } else {
                                                                 // Saved to user defaults...
+                                                                NSLog(@"Saved token");
                                                             }
-                                                            
                                                         }];
-    
     return YES;
 }
 

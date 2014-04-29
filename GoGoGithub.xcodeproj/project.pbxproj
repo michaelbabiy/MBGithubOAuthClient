@@ -20,9 +20,8 @@
 		48EC104B1909DFE7000B6B64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EC10331909DFE7000B6B64 /* UIKit.framework */; };
 		48EC10531909DFE7000B6B64 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48EC10511909DFE7000B6B64 /* InfoPlist.strings */; };
 		48EC10551909DFE7000B6B64 /* GoGoGithubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EC10541909DFE7000B6B64 /* GoGoGithubTests.m */; };
-		48EC10601909E021000B6B64 /* MBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EC105F1909E021000B6B64 /* MBHomeViewController.m */; };
+		48EC10601909E021000B6B64 /* MBGithubOAuthClientDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EC105F1909E021000B6B64 /* MBGithubOAuthClientDemoViewController.m */; };
 		48EC10651909E127000B6B64 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EC10641909E127000B6B64 /* iPhone.storyboard */; };
-		48EC106B190AB5DB000B6B64 /* NSString+MBRequestURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EC106A190AB5DB000B6B64 /* NSString+MBRequestURL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,12 +53,9 @@
 		48EC10501909DFE7000B6B64 /* GoGoGithubTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoGoGithubTests-Info.plist"; sourceTree = "<group>"; };
 		48EC10521909DFE7000B6B64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		48EC10541909DFE7000B6B64 /* GoGoGithubTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoGoGithubTests.m; sourceTree = "<group>"; };
-		48EC105E1909E021000B6B64 /* MBHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBHomeViewController.h; sourceTree = "<group>"; };
-		48EC105F1909E021000B6B64 /* MBHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBHomeViewController.m; sourceTree = "<group>"; };
-		48EC10611909E105000B6B64 /* MBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBConstants.h; sourceTree = "<group>"; };
+		48EC105E1909E021000B6B64 /* MBGithubOAuthClientDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBGithubOAuthClientDemoViewController.h; sourceTree = "<group>"; };
+		48EC105F1909E021000B6B64 /* MBGithubOAuthClientDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBGithubOAuthClientDemoViewController.m; sourceTree = "<group>"; };
 		48EC10641909E127000B6B64 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
-		48EC1069190AB5DB000B6B64 /* NSString+MBRequestURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MBRequestURL.h"; sourceTree = "<group>"; };
-		48EC106A190AB5DB000B6B64 /* NSString+MBRequestURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MBRequestURL.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,15 +82,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4861C00C190B65EC00FEB3B8 /* Previous Version */ = {
-			isa = PBXGroup;
-			children = (
-				48EC1069190AB5DB000B6B64 /* NSString+MBRequestURL.h */,
-				48EC106A190AB5DB000B6B64 /* NSString+MBRequestURL.m */,
-			);
-			name = "Previous Version";
-			sourceTree = "<group>";
-		};
 		4861C010190B668D00FEB3B8 /* MBGithubOAuthClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,13 +124,11 @@
 		48EC10351909DFE7000B6B64 /* GoGoGithub */ = {
 			isa = PBXGroup;
 			children = (
-				48EC10611909E105000B6B64 /* MBConstants.h */,
 				48EC103E1909DFE7000B6B64 /* MBAppDelegate.h */,
 				48EC103F1909DFE7000B6B64 /* MBAppDelegate.m */,
-				48EC105E1909E021000B6B64 /* MBHomeViewController.h */,
-				48EC105F1909E021000B6B64 /* MBHomeViewController.m */,
+				48EC105E1909E021000B6B64 /* MBGithubOAuthClientDemoViewController.h */,
+				48EC105F1909E021000B6B64 /* MBGithubOAuthClientDemoViewController.m */,
 				4861C010190B668D00FEB3B8 /* MBGithubOAuthClient */,
-				4861C00C190B65EC00FEB3B8 /* Previous Version */,
 				48EC10641909E127000B6B64 /* iPhone.storyboard */,
 				48EC10411909DFE7000B6B64 /* Images.xcassets */,
 				48EC10361909DFE7000B6B64 /* Supporting Files */,
@@ -280,8 +265,7 @@
 				4861C00F190B668700FEB3B8 /* MBGithubOAuthClient.m in Sources */,
 				48EC103C1909DFE7000B6B64 /* main.m in Sources */,
 				48EC10401909DFE7000B6B64 /* MBAppDelegate.m in Sources */,
-				48EC10601909E021000B6B64 /* MBHomeViewController.m in Sources */,
-				48EC106B190AB5DB000B6B64 /* NSString+MBRequestURL.m in Sources */,
+				48EC10601909E021000B6B64 /* MBGithubOAuthClientDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

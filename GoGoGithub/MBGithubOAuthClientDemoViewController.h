@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MBHomeViewController : UIViewController
+@interface MBGithubOAuthClientDemoViewController : UIViewController
+
+@property (nonatomic, weak) IBOutlet UITextView *tokenTextView;
 
 @end
